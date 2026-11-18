@@ -7,17 +7,15 @@ flowchart TD
     Install --> Build[npm run build]
     Build --> Dist[dist static output]
     Dist --> Host[Static web hosting]
-    Host --> Client[Browser]
+    Host --> Browser[User browser]
 ```
 
-## 🧱 Deployment units
-
-| Unit | Current evidence |
+| Deployment unit | Current evidence |
 |---|---|
 | Static client bundle | Vite build script. |
 | Server API | Not found in inspected root project. |
 | Database server | Not found in inspected root project. |
-| CDN / hosting | Provider not established. |
+| Hosting provider / CDN | Not established. |
 | Secrets service | Not established. |
 
-A static host must serve the app entry for supported client-side routes. Browser persistence is origin-scoped; changing domain or protocol can make prior browser-local data unavailable. No provider-specific deployment is claimed.
+Static hosting must serve the app entry for supported client routes. Browser persistence is origin-scoped. No live hosting provider is claimed.
