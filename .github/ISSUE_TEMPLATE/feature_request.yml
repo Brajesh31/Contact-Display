@@ -1,33 +1,35 @@
 name: "✨ Feature request"
-description: Suggest a focused improvement.
+description: Suggest an improvement with a clear user benefit.
 title: "[Feature]: "
 labels: ["enhancement"]
 body:
   - type: textarea
     id: problem
     attributes:
-      label: Problem or user need
-      description: What user problem should be solved?
+      label: User problem
+      description: What user need or limitation would this address?
     validations:
       required: true
   - type: textarea
     id: proposal
     attributes:
-      label: Proposed solution
+      label: Proposed behavior
+      description: Describe the expected behavior without prescribing unnecessary implementation details.
     validations:
       required: true
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives considered
   - type: textarea
     id: acceptance
     attributes:
       label: Acceptance criteria
-      description: List observable outcomes.
+      description: List observable outcomes that would make the proposal complete.
     validations:
       required: true
   - type: textarea
     id: impact
     attributes:
       label: Architecture, privacy, and accessibility impact
+      description: Note affected routes, data, dependencies, security, accessibility, or deployment.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
