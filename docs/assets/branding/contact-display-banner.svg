@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="420" viewBox="0 0 1600 420" role="img" aria-labelledby="title desc">
+  <title id="title">Contact Display</title>
+  <desc id="desc">A clean blue and violet banner with a contact card icon and the words Contact Display, browser-based contact manager.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14213d"/>
+      <stop offset="0.55" stop-color="#244a86"/>
+      <stop offset="1" stop-color="#6d5bd0"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8ee3ff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="420" rx="28" fill="url(#bg)"/>
+  <circle cx="1375" cy="40" r="230" fill="#fff" opacity=".06"/>
+  <circle cx="1510" cy="380" r="260" fill="#fff" opacity=".05"/>
+  <g transform="translate(118 90)">
+    <rect x="0" y="0" width="220" height="220" rx="36" fill="#fff" opacity=".12" stroke="#fff" stroke-opacity=".35" stroke-width="3"/>
+    <circle cx="110" cy="76" r="37" fill="url(#accent)"/>
+    <path d="M43 180c9-39 35-59 67-59s58 20 67 59" fill="none" stroke="url(#accent)" stroke-width="18" stroke-linecap="round"/>
+    <circle cx="178" cy="164" r="27" fill="#fff"/>
+    <path d="M178 151v26M165 164h26" stroke="#244a86" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="405" y="185" fill="#fff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="76" font-weight="750">Contact Display</text>
+  <text x="410" y="252" fill="#e0e7ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="32" font-weight="450">A browser-based contact manager</text>
+  <text x="410" y="315" fill="#c4b5fd" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" letter-spacing="3">REACT · ROUTER · VITE · LOCALFORAGE</text>
+</svg>
