@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Validate required documentation files without modifying the repository."""
+"""Validate required documentation paths and reject empty files.
+
+This script is read-only. It does not inspect or change application source.
+"""
 from pathlib import Path
 import sys
 
@@ -9,7 +12,11 @@ REQUIRED = [
     "SECURITY.md", "SUPPORT.md", "CHANGELOG.md", "ROADMAP.md",
     "docs/README.md", "docs/architecture.md", "docs/project-structure.md",
     "docs/page-documentation.md", "docs/data-flow.md", "docs/testing.md",
-    "docs/deployment.md", "docs/privacy.md", "docs/known-issues.md",
+    "docs/deployment.md", "docs/privacy.md", "docs/security.md",
+    "docs/threat-model.md", "docs/known-issues.md",
+    "docs/architecture/route-and-state-model.md",
+    "docs/architecture/requirements-traceability.md",
+    "docs/architecture/data-architecture.md",
     "docs/assets/README.md", "docs/templates/README.md",
 ]
 
