@@ -5,19 +5,20 @@ labels: ["bug"]
 body:
   - type: markdown
     attributes:
-      value: "Please remove personal contact information from every example, log, and screenshot."
+      value: |
+        Please use synthetic contact records only. Remove names, phone numbers, notes, browser-storage exports, and other personal information from all screenshots and logs.
   - type: textarea
     id: summary
     attributes:
       label: Problem summary
-      description: What is wrong?
+      description: What is wrong, and which route or workflow is affected?
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
       label: Steps to reproduce
-      description: Provide ordered, minimal steps.
+      description: Provide ordered, minimal steps with synthetic data.
     validations:
       required: true
   - type: textarea
@@ -40,8 +41,12 @@ body:
     id: os
     attributes:
       label: Operating system
+  - type: input
+    id: commit
+    attributes:
+      label: Commit or application version
   - type: textarea
     id: evidence
     attributes:
       label: Sanitized evidence
-      description: Remove names, phone numbers, notes, tokens, and private contact details.
+      description: Link sanitized logs or screenshots. Never attach private contact records.
