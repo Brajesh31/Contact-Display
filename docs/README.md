@@ -1,41 +1,20 @@
 # 📚 Contact Display Documentation
 
-Welcome to the engineering documentation for Contact Display. This documentation is based on the root application source inspected in the repository. It describes the current client-side implementation and identifies unknowns rather than assuming a server architecture.
+This documentation reflects the inspected React/Vite client-side application.
 
-## 🧭 Documentation map
+| Area | Guide |
+|---|---|
+| Product | [Overview](product-overview.md), [features](features.md), [requirements](functional-requirements.md), [objectives](product-objectives.md), [personas](user-personas.md), [journeys](user-journeys.md), [use cases](use-cases.md), [scope](scope-and-limitations.md) |
+| Architecture | [Architecture](architecture.md), [system design](system-design.md), [technical overview](technical-overview.md), [module documentation](module-documentation.md), [component architecture](component-architecture.md), [data flow](data-flow.md), [database/storage](database.md), [diagram catalog](architecture/README.md) |
+| Frontend | [Page documentation](page-documentation.md), [navigation](navigation-structure.md), [component inventory](component-library.md), [design system](design-system.md), [responsive design](responsive-design.md), [UI/UX guidelines](ui-ux-guidelines.md) |
+| Development | [Installation](installation.md), [getting started](getting-started.md), [local development](local-development.md), [commands](commands-reference.md), [developer guide](developer-guide.md), [debugging](debugging.md), [troubleshooting](troubleshooting.md) |
+| Quality | [Testing](testing.md), [test strategy](test-strategy.md), [quality gates](quality-gates.md), [accessibility](accessibility.md), [WCAG target](wcag-compliance.md) |
+| Security/privacy | [Security](security.md), [threat model](threat-model.md), [privacy](privacy.md), [secret management](secret-management.md), [dependency security](dependency-security.md) |
+| Operations | [Deployment](deployment.md), [CI/CD](ci-cd.md), [monitoring](monitoring.md), [maintenance](maintenance.md), [risk register](risk-register.md), [known issues](known-issues.md), [technical debt](technical-debt.md) |
+| Templates/assets | [Templates](templates/README.md), [visual assets](assets/README.md) |
 
-| Area | Document | Purpose |
-|---|---|---|
-| Product | [Product overview](product-overview.md) | Purpose, users, scope, and behavior. |
-| Features | [Features](features.md) | Verified feature inventory and requirements. |
-| Architecture | [Architecture](architecture.md) | Runtime components and boundaries. |
-| Design | [System design](system-design.md) | Routing, state, and persistence design. |
-| Code | [Technical overview](technical-overview.md) | Source module responsibilities. |
-| Lifecycle | [Application lifecycle](application-lifecycle.md) | Startup and route execution. |
-| Components | [Component architecture](component-architecture.md) | UI composition. |
-| Modules | [Module documentation](module-documentation.md) | Source-level module reference. |
-| Dependencies | [Dependencies](dependencies.md) | Runtime and development dependencies. |
-| Structure | [Project structure](project-structure.md) | Directory tree and file responsibilities. |
-| Pages | [Page documentation](page-documentation.md) | Route-by-route behavior. |
-| Data | [Data flow](data-flow.md) | Contact record lifecycle. |
-| Development | [Developer guide](developer-guide.md) | Setup and commands. |
-| Testing | [Testing](testing.md) | Existing checks and proposed test coverage. |
-| Operations | [Deployment](deployment.md) | Static build and hosting guidance. |
-| Security | [Security](security.md) | Threats and design limitations. |
-| Accessibility | [Accessibility](accessibility.md) | Accessibility review checklist. |
-| Privacy | [Privacy](privacy.md) | Browser storage and personal data. |
-| Maintenance | [Maintenance](maintenance.md) | Maintenance and review process. |
-| Risk | [Known issues](known-issues.md) | Verified observations and follow-up. |
-| Templates | [Templates](templates/README.md) | Reusable engineering templates. |
-| Architecture visuals | [Diagram catalog](architecture/README.md) | Editable diagrams and exports. |
+## 📌 Status conventions
+**Implemented** means supported by inspected source. **Proposed** means not implemented. **Unknown** means evidence is insufficient. No live test, security audit, accessibility conformance, or deployment is claimed without evidence.
 
-## 🧪 Accuracy and status conventions
-
-- **Implemented** means directly supported by inspected source.
-- **Configured** means present in repository configuration, not necessarily verified in a live environment.
-- **Proposed** means a suggested improvement that has not been implemented.
-- **Unknown** means the available source does not establish the behavior.
-
-## 🔒 Change boundary
-
-Application source, package manifests, lockfiles, application styles, and build configuration are outside the scope of this documentation set. Refer to [contribution rules](../CONTRIBUTING.md) before proposing changes.
+## 🔒 Scope
+Application source, styles, package manifests, lockfiles, and build configuration are preserved during documentation-only maintenance.
