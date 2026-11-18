@@ -1,23 +1,37 @@
-name: "📚 Documentation improvement"
-description: Report missing, unclear, or incorrect documentation.
+name: "📚 Documentation issue"
+description: Report inaccurate, missing, unclear, or broken documentation.
 title: "[Docs]: "
 labels: ["documentation"]
 body:
   - type: input
-    id: location
+    id: page
     attributes:
-      label: Documentation file or section
+      label: Documentation page
+      description: Provide the repository path or URL.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Issue type
+      options:
+        - Incorrect technical information
+        - Missing documentation
+        - Broken link
+        - Unclear instructions
+        - Outdated screenshot or diagram
+        - Accessibility/readability problem
     validations:
       required: true
   - type: textarea
-    id: problem
+    id: details
     attributes:
-      label: What is unclear or incorrect?
+      label: What needs to change?
+      description: Explain the problem and expected correction.
     validations:
       required: true
   - type: textarea
-    id: suggestion
+    id: evidence
     attributes:
-      label: Suggested correction
-    validations:
-      required: true
+      label: Supporting evidence
+      description: Link source code, workflow runs, or safe screenshots.
