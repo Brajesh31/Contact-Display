@@ -1,36 +1,42 @@
-# 🔀 Pull Request
+## 📝 Summary
+<!-- Describe the change and the user/developer problem it solves. -->
 
-## 🎯 Summary
-[What does this change do and why?]
+## 🎯 Scope
+- [ ] Application behavior
+- [ ] Documentation only
+- [ ] Repository governance or automation
+- [ ] Visual assets or diagrams
 
-## 📦 Change type
-- [ ] Documentation
-- [ ] Repository configuration / governance
-- [ ] CI or validation automation
-- [ ] Approved application code change
+## 🔒 Protected application files
+- [ ] No unrelated application code was changed.
+- [ ] Any application source/configuration change is explicitly in scope and authorized.
+- [ ] Existing project behavior and dependencies were preserved where not in scope.
 
-## 🔒 Source preservation check
-- [ ] No application source files changed.
-- [ ] No application styles changed.
-- [ ] No package manifests or lockfiles changed.
-- [ ] No application/build behavior changed.
-- [ ] Any authorized exception is explained below.
+## 🧪 Verification
+- [ ] Relevant checks were executed.
+- [ ] Results and evidence are linked below.
+- [ ] Checks not run are explicitly listed.
 
-## 🧪 Validation evidence
-| Check | Command / method | Result |
-|---|---|---|
-| Docs links | [Command] | [Actual result] |
-| SVG | [Command] | [Actual result] |
-| Lint/build (if run) | [Command] | [Actual result] |
+**Commands / CI links:**
 
-## 🖼️ Screenshots / diagrams
-[Add authentic evidence and alt text. Redact private contact data.]
+## 📚 Documentation and visuals
+- [ ] README and related docs updated.
+- [ ] Diagrams match actual implementation.
+- [ ] Screenshots are genuine and contain synthetic/redacted data.
+- [ ] Internal links and asset references checked.
+
+## 🔐 Security, privacy, accessibility
+- [ ] No secrets or personal contact data added.
+- [ ] Security/privacy implications reviewed.
+- [ ] Accessibility impact considered where relevant.
 
 ## ⚠️ Risks and limitations
-[Known follow-up work.]
+<!-- List known risks, follow-ups, and unverified assumptions. -->
+
+## 📸 Screenshots or evidence
+<!-- Attach only sanitized evidence. -->
 
 ## ✅ Reviewer checklist
-- [ ] Claims match inspected source.
-- [ ] Internal links resolve.
-- [ ] Diagrams are accurate.
-- [ ] No secrets or personal data added.
+- [ ] Change is focused and maintainable.
+- [ ] No fake passing badges, metrics, or test claims.
+- [ ] Changelog/roadmap updated when warranted.
