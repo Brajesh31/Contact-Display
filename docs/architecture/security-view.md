@@ -8,16 +8,14 @@ flowchart TD
     Router --> Helpers[Client data helpers]
     Helpers --> Storage[(Browser storage)]
     UI --> External[External avatar / website URLs]
-    External -. third-party request/navigation .-> Internet[External web]
+    External -. request or navigation .-> Internet[External web]
 ```
-
-## 🔐 Boundaries and controls
 
 | Boundary | Security meaning |
 |---|---|
-| Browser profile | User/device access controls govern stored contact visibility. |
+| Browser profile | Device/profile controls govern access to stored contacts. |
 | Application UI | Client code can be inspected or modified by the user. |
 | Browser storage | Not a server-side security boundary. |
-| External URLs | Values are user-provided and can point outside the application. |
+| External URLs | User-provided values may point outside the application. |
 
-There is no verified backend authentication, authorization, or server firewall layer in the inspected source. See [threat model](../threat-model.md).
+No backend authentication, authorization, or server firewall layer was found in the inspected root source. See [threat model](../threat-model.md).
