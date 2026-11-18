@@ -1,105 +1,210 @@
-
 <p align="center">
-  <a href="https://github.com/Brajesh31/Contact-Display">
-    <img src="https://raw.githubusercontent.com/Brajesh31/asset/main/contact-display-banner.png" alt="Contact Display Banner">
-  </a>
+  <img src="docs/assets/branding/contact-display-banner.svg" alt="Contact Display project banner" width="100%">
 </p>
 
 <div align="center">
 
-# 👤 Contact Display & Management App 📞
+# 👤 Contact Display
 
-**A full-stack CRUD (Create, Read, Update, Delete) application for managing your contacts, built with the MERN stack.**
+**A browser-based contact manager built with React, React Router, Vite, and localForage.**
+
+[![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=111827)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
+[![React Router](https://img.shields.io/badge/React_Router-6-CA4245?logo=reactrouter&logoColor=white)](https://reactrouter.com/)
+[![License](https://img.shields.io/github/license/Brajesh31/Contact-Display)](LICENSE)
+[![Last commit](https://img.shields.io/github/last-commit/Brajesh31/Contact-Display)](https://github.com/Brajesh31/Contact-Display/commits/main)
 
 </div>
 
-<p align="center">
-  <a href="[LINK_TO_YOUR_LIVE_DEMO]">
-    <img src="https://img.shields.io/badge/Live-View_Demo-brightgreen?style=for-the-badge&logo=vercel" alt="Live Demo">
-  </a>
-  &nbsp;
-  <img src="https://img.shields.io/github/stars/Brajesh31/Contact-Display?style=for-the-badge&color=gold" alt="Stars">
-  &nbsp;
-  <img src="https://img.shields.io/github/license/Brajesh31/Contact-Display?style=for-the-badge&color=blue" alt="License">
-</p>
+---
+
+## ✨ Overview
+
+Contact Display is a client-side contact-management application. It provides a contact list, search, contact detail view, create and edit forms, favorite toggling, and deletion. The inspected implementation uses React 18, React Router's data-router APIs, Vite, and localForage for browser-side persistence.
+
+> [!IMPORTANT]
+> This repository is not a MERN application. The inspected root project contains no Express server, MongoDB integration, REST API, or separate `server/` and `client/` directories. Contact records are stored in the browser through localForage. Documentation deliberately reflects this implementation.
+
+## 🎯 Features
+
+| Capability | Current implementation |
+|---|---|
+| 📇 Browse contacts | Root route loads and displays saved contacts. |
+| 🔎 Search | Search query is submitted through React Router and matched against first/last names using `match-sorter`. |
+| ➕ Create | The root route action creates a contact and redirects to its edit route. |
+| 👁️ View details | Contact route loads a record by ID and displays available fields. |
+| ⭐ Favorite | Contact action updates the `favorite` property. |
+| ✏️ Edit | Edit route loads the record and persists submitted form values. |
+| 🗑️ Delete | Delete route action removes a contact after browser confirmation. |
+| 💾 Browser persistence | `localforage` stores the contacts collection in browser-managed storage. |
+| 🧭 Client routing | `createBrowserRouter` defines the application routes. |
+
+## 🧰 Technology stack
+
+| Layer | Technology | Role |
+|---|---|---|
+| UI | React 18 | Component rendering and interactive interface. |
+| Routing | React Router DOM 6 | Browser routes, loaders, actions, forms, navigation, and error boundaries. |
+| Build tooling | Vite 5 | Development server and production bundling. |
+| Persistence | localForage | Asynchronous browser-side storage abstraction. |
+| Search | match-sorter | Matching contacts by first and last name. |
+| Sorting | sort-by | Sorting contact records. |
+| Styling | CSS and vendored Bootstrap 5.2.3 assets | Application styling and included framework assets. |
+| Quality | ESLint | Static lint command defined in package scripts. |
+
+## 🏛️ Architecture at a glance
+
+```mermaid
+flowchart TD
+    U[User / Browser] --> V[React UI]
+    V --> R[React Router data router]
+    R --> ROOT[Root route and contact list]
+    R --> DETAIL[Contact detail route]
+    R --> EDIT[Edit contact route]
+    R --> DELETE[Destroy action route]
+    ROOT --> DATA[contacts.js data module]
+    DETAIL --> DATA
+    EDIT --> DATA
+    DELETE --> DATA
+    DATA --> L[localForage]
+    L --> B[(Browser-managed storage)]
+```
+
+See the [architecture guide](docs/architecture.md), [route inventory](docs/page-documentation.md), and [editable diagrams](docs/architecture/README.md).
+
+## 🚀 Run locally
+
+### Prerequisites
+
+- Git
+- Node.js compatible with the Vite 5 toolchain
+- npm
+
+No database server or backend service is configured in the inspected root project.
+
+### Installation
+
+```bash
+git clone https://github.com/Brajesh31/Contact-Display.git
+cd Contact-Display
+npm ci
+npm run dev
+```
+
+Vite prints the local development URL in the terminal.
+
+### Available npm scripts
+
+| Command | Purpose |
+|---|---|
+| `npm run dev` | Starts the Vite development server. |
+| `npm run build` | Creates the production build using Vite. |
+| `npm run preview` | Serves the generated build locally for preview. |
+| `npm run lint` | Runs the configured ESLint command. |
+
+`npm start`, a backend startup command, and database migration commands are not defined in the inspected `package.json`.
+
+## 🗺️ Route inventory
+
+| Route | Responsibility | Router behavior |
+|---|---|---|
+| `/` | Contact list and search | Root loader and create-contact action. |
+| `/contacts/:contactId` | Contact details and favorite action | Contact loader and action. |
+| `/contacts/:contactId/edit` | Edit a contact | Edit loader and update action. |
+| `/contacts/:contactId/destroy` | Delete a contact | Destructive action followed by redirect. |
+
+The route definitions are in `src/main.jsx`. Detailed route behavior and state transitions are documented in [page documentation](docs/page-documentation.md).
+
+## 🗂️ Project structure
+
+```text
+Contact-Display/
+├── .github/
+│   └── workflows/
+│       └── update-readme.yml       # Existing timestamp automation (preserved)
+├── docs/                           # Product and engineering documentation
+│   ├── architecture/               # Architecture views and diagrams
+│   ├── assets/                     # Documentation-only visual assets
+│   └── templates/                  # Reusable engineering templates
+├── scripts/                        # Documentation validation utilities
+├── public/                         # Existing public assets
+├── src/
+│   ├── routes/                     # Existing route modules
+│   ├── css/bootstrap-5.2.3/         # Existing vendored framework tree
+│   ├── contacts.js                 # Existing browser persistence/data operations
+│   ├── contacts2.js                # Existing alternate data module
+│   ├── main.jsx                    # Existing router and application entry point
+│   └── index.css                   # Existing application styles
+├── index.html                      # Existing Vite HTML entry
+├── package.json                    # Existing package scripts and dependencies
+├── package-lock.json               # Existing npm lockfile
+├── vite.config.js                  # Existing Vite configuration
+└── README.md
+```
+
+This is a high-level map. The exhaustive tracked-file inventory is maintained in [project structure](docs/project-structure.md).
+
+## 💾 Data and privacy model
+
+- Contact data is handled in the browser through localForage.
+- The inspected data module uses a `contacts` collection and contact objects with fields such as `id`, `createdAt`, `first`, `last`, `avatar`, `website`, `number`, `notes`, and `favorite`.
+- The repository does not show a remote database or backend synchronization service.
+- Browser storage is scoped to the browser profile and origin. Clearing site data can remove locally stored records.
+- Do not enter sensitive information unless you have assessed the security and privacy of the browser environment.
+
+More detail: [data architecture](docs/architecture/data-architecture.md) and [privacy notes](docs/privacy.md).
+
+## 🧪 Quality checks
+
+Run the checks supported by the current package scripts:
+
+```bash
+npm run lint
+npm run build
+```
+
+These commands have not been represented as passing merely because they are documented. CI and local execution results should be checked in the relevant run before a release.
+
+## 🔐 Security
+
+See [SECURITY.md](SECURITY.md) and the [security guide](docs/security.md). The current application is client-side and stores user-entered contact information in browser storage. There is no server-side authorization boundary in the inspected implementation.
+
+## 📚 Documentation index
+
+| Guide | Contents |
+|---|---|
+| [Product overview](docs/product-overview.md) | Purpose, audience, scope, and product behavior. |
+| [Features and requirements](docs/features.md) | Feature inventory and requirements. |
+| [Architecture](docs/architecture.md) | System structure and design. |
+| [System design](docs/system-design.md) | Runtime, routing, and data design. |
+| [Project structure](docs/project-structure.md) | Directory and file responsibilities. |
+| [Page documentation](docs/page-documentation.md) | Routes, screens, actions, and interactions. |
+| [Data flow](docs/data-flow.md) | Contact read/write lifecycle. |
+| [Development guide](docs/developer-guide.md) | Setup, scripts, and workflow. |
+| [Testing and quality](docs/testing.md) | Current checks and suggested verification. |
+| [Deployment](docs/deployment.md) | Static build and hosting considerations. |
+| [Security](docs/security.md) | Threats, controls, and limitations. |
+| [Accessibility](docs/accessibility.md) | Accessibility review guidance. |
+| [Known issues](docs/known-issues.md) | Source observations requiring follow-up. |
+| [Architecture diagrams](docs/architecture/README.md) | Mermaid and SVG source assets. |
+| [Templates](docs/templates/README.md) | Reusable project templates. |
+
+## 🛣️ Roadmap
+
+See [ROADMAP.md](ROADMAP.md). Planned improvements are clearly separated from existing features.
+
+## 🤝 Contributing
+
+Read [CONTRIBUTING.md](CONTRIBUTING.md) before proposing changes. This documentation-focused enhancement does not require changes to the completed application source.
+
+## 📄 License
+
+Distributed under the MIT License. See [LICENSE](LICENSE).
+
+## 👨‍💻 Maintainer
+
+**Brajesh Kumar** · [GitHub](https://github.com/Brajesh31)
 
 ---
 
-## ## ✨ Project Overview
-
-This project is a practical and robust Contact Management application that demonstrates all the essential features of a full-stack CRUD system. Users can seamlessly add, view, search, edit, and delete contact information through a clean and intuitive user interface.
-
-Built with the MERN (MongoDB, Express.js, React, Node.js) stack, this application serves as a strong example of building a modern, data-driven web app with a decoupled frontend and backend.
-
-
-
----
-## ## ⭐ Core Features
-
-* **View All Contacts**: Display all saved contacts in a clean, responsive list or card layout.
-* **Search & Filter**: Instantly find specific contacts by typing in the search bar.
-* **Create New Contacts**: Add new contacts to the database via a simple and intuitive form.
-* **Update Existing Contacts**: Easily edit and update the information of any contact.
-* **Delete Contacts**: Remove contacts from the database with a confirmation step.
-* **RESTful API**: A well-structured backend API to handle all CRUD operations.
-
----
-## ## 🛠️ Technology Stack
-
-| Category | Technology |
-| :--- | :--- |
-| **Frontend** | [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/) |
-| **Backend** | [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/) [![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/) |
-| **Database** | [![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/) |
-
----
-## ## 🚀 Getting Started
-
-To get a local copy up and running, follow these detailed steps.
-
-### ### ✅ Prerequisites
-
-* **Node.js** (v18.x or later)
-* **npm** & **Git**
-* **MongoDB**: A running instance of MongoDB, either locally or a connection string from MongoDB Atlas.
-
-### ### ⚙️ Installation & Setup
-
-1.  **Clone the repository**:
-    ```sh
-    git clone [https://github.com/Brajesh31/Contact-Display.git](https://github.com/Brajesh31/Contact-Display.git)
-    ```
-2.  **Navigate to the project directory**:
-    ```sh
-    cd Contact-Display
-    ```
-3.  **Backend Setup**:
-    * Navigate to the backend directory: `cd server`
-    * Install backend dependencies: `npm install`
-    * Create a `.env` file in the `server` directory and add the environment variables listed below.
-    * Start the backend server: `npm start`
-
-4.  **Frontend Setup**:
-    * Navigate to the frontend directory from the root folder: `cd client`
-    * Install frontend dependencies: `npm install`
-    * Start the frontend development server: `npm start`
-
-### ### 🔑 Environment Variables
-
-You need to create a `.env` file in the `server` directory and add the following variables:
-
-MONGO_URI="Your_MongoDB_Connection_String"
-PORT=8000
-
-
----
-## ## 📜 License
-
-Distributed under the MIT License. See `LICENSE` file for more information.
-
----
-## ## 📬 Contact
-
-Brajesh - [@Brajesh31 on GitHub](https://github.com/Brajesh31)
-
-Last updated: 2026-11-17 21:25 UTC
+<sub>Documentation describes the repository as inspected. Verify current source and CI before relying on operational or security claims.</sub>
