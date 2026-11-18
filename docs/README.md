@@ -30,3 +30,12 @@ Welcome to the technical documentation for **Contact Display**, a browser-based 
 ## 🔒 Scope protection
 
 Application source, styles, HTML entry point, dependencies, lockfiles, and build configuration are preserved during documentation-only repository maintenance. See [project structure and ownership](project-structure.md).
+
+## 🧱 Additional reference guides
+
+| Topic | Guide |
+|---|---|
+| 🎯 Objectives and problem | [Project objectives](project-objectives.md) · [Problem statement](problem-statement.md) · [FAQ](faq.md) · [Glossary](glossary.md) |
+| 🏛️ Technical design | [Technical overview](technical-overview.md) · [Application lifecycle](application-lifecycle.md) · [Component architecture](component-architecture.md) · [Module documentation](module-documentation.md) · [Design patterns](design-patterns.md) · [Technology stack](technology-stack.md) · [Dependency overview](dependencies.md) |
+| 🧪 Assurance | [Quality gates](quality-gates.md) · [WCAG evaluation target](wcag-compliance.md) |
+| 🔐 Security operations | [Secret handling](secret-management.md) · [Dependency security](dependency-security.md) |
