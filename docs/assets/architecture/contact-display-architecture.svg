@@ -9,6 +9,4 @@
 <rect x="315" y="330" width="260" height="155" rx="16" class="b"/><text x="445" y="370" text-anchor="middle" class="s">Route modules</text><text x="445" y="408" text-anchor="middle" class="p">Root / list / search</text><text x="445" y="437" text-anchor="middle" class="p">Contact / Edit / Delete</text>
 <rect x="665" y="330" width="230" height="155" rx="16" class="g"/><text x="780" y="370" text-anchor="middle" class="s">contacts.js</text><text x="780" y="408" text-anchor="middle" class="p">CRUD helpers</text><text x="780" y="437" text-anchor="middle" class="p">Search and sorting</text>
 <rect x="975" y="330" width="175" height="155" rx="16" class="g"/><text x="1062" y="370" text-anchor="middle" class="s">localForage</text><text x="1062" y="408" text-anchor="middle" class="p">Browser storage</text><text x="1062" y="437" text-anchor="middle" class="p">Key: contacts</text>
-<path d="M750 220V275H445V330M575 408H665M895 408H975" class="a"/>
-<text x="55" y="575" class="p">Boundary note: no application API server or remote database was found in the inspected root project.</text>
-</svg>
+<path d="M750 220V275H445V330M575 408H665M895 408H975" class="a"/><text x="55" y="575" class="p">No application API server or remote database was found in the inspected root project.</text></svg>
