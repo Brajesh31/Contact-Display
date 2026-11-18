@@ -11,5 +11,4 @@
 | Deployment | [Deployment view](deployment-view.md) | Vite static build path. |
 | Security | [Security view](security-view.md) | Client trust boundaries. |
 
-## 🧰 Diagram maintenance
-Keep diagrams source-aligned, validate SVG XML, and never introduce fictional services, databases, API routes, or authentication layers.
+Keep diagrams source-aligned, validate SVG XML, and never introduce fictional services, databases, APIs, or authentication layers.
