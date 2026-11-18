@@ -2,10 +2,10 @@
 
 | Directory | Purpose |
 |---|---|
-| `branding/` | Project documentation banner and brand visuals. |
-| `architecture/` | Architecture/data/deployment/security SVGs. |
-| `screenshots/` | Reserved for genuine screenshots captured from a running app. |
-| `demos/` | Reserved for genuine demo recordings/GIFs and thumbnails. |
+| `branding/` | Project documentation banner. |
+| `architecture/` | Architecture, data-flow, and sequence SVGs. |
+| `screenshots/` | Reserved for genuine captures from a running application. |
+| `demos/` | Reserved for authentic recordings/GIFs. |
 
-## ⚠️ Authenticity policy
-No running application capture was available during this documentation pass. Do not populate screenshot/demo folders with fictional UI. Add authentic captures after running the app and removing any personal contact data.
+## ⚠️ Authenticity
+No running-app screenshot was captured during this documentation pass. Do not place fabricated UI in screenshot/demo directories. Capture real screens only after running the application and redacting personal contact information.
