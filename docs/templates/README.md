@@ -30,3 +30,7 @@ Reusable templates for documenting architecture, product changes, APIs, quality 
 4. Separate verified facts from assumptions and proposals.
 5. Do not enter real contact data, access tokens, or secrets into examples.
 6. Record review and approval where the process requires it.
+
+- [Documentation review](documentation-review-template.md) for periodic accuracy, evidence, and protected-file audits.
+- [Production readiness review](production-readiness-template.md) for evidence-based release decisions.
+- [Dependency review](dependency-review-template.md) for dependency risk assessment without unapproved updates.
