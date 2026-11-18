@@ -2,7 +2,7 @@
 
 ## 📌 Purpose
 
-Describe the client-side route graph and interaction states configured in `src/main.jsx` and implemented by route modules.
+Describe the client-side route graph and interaction states configured in `src/main.jsx` and the route modules.
 
 ## 🗺️ Route hierarchy
 
@@ -15,7 +15,7 @@ flowchart TD
   Contact --> Destroy["contacts/:contactId/destroy · action route"]
 ```
 
-## 🔁 Route loader sequence
+## 🔁 Loader sequence
 
 ```mermaid
 sequenceDiagram
@@ -38,23 +38,23 @@ sequenceDiagram
 
 | State | Trigger | Expected UI | Source |
 |---|---|---|---|
-| Populated contact list | Collection contains records. | Sidebar lists records. | `root.jsx` |
-| Empty contact list | No saved records. | “No contacts” message. | `root.jsx` |
+| Populated list | Collection contains records. | Sidebar lists records. | `root.jsx` |
+| Empty list | No saved records. | “No contacts” message. | `root.jsx` |
 | Search pending | Router navigates with `q`. | Loading class/spinner state. | `root.jsx` |
-| Contact selected | Contact URL resolves. | Details panel renders. | `contact.jsx` |
+| Contact selected | Contact URL resolves. | Details panel. | `contact.jsx` |
 | Contact missing | Loader cannot find ID. | 404 route error. | `contact.jsx` |
-| Edit form | Edit URL resolves. | Form fields use stored values. | `edit.jsx` |
-| Favorite pending | Fetcher has submitted form data. | Button reflects pending favorite value. | `contact.jsx` |
+| Edit form | Edit URL resolves. | Fields populated from record. | `edit.jsx` |
+| Favorite pending | Fetcher submitted form data. | Button reflects pending value. | `contact.jsx` |
 | Delete confirmation | User submits delete form. | Browser confirmation dialog. | `contact.jsx` |
-| Delete complete | Destroy action redirects. | Navigate to root. | `destroy.jsx` |
+| Delete complete | Destroy action redirects. | Return to root. | `destroy.jsx` |
 
 ## 🔒 State ownership
 
 - React Router manages navigation and loader/action state.
 - React renders components.
-- localForage stores contact records under the `contacts` key.
+- localForage stores records under the `contacts` key.
 - No server session, remote synchronization, or centralized state service is established by inspected implementation.
 
 ## ⚠️ Source finding
 
-The root route has seed-card initialization calls and identifiers that are inconsistent in the currently inspected source. See [known issues](../known-issues.md). This document does not modify or claim to repair that behavior.
+Root route seed-card initialization calls and identifiers are inconsistent in currently inspected source. See [known issues](../known-issues.md). This document does not modify or claim to repair that behavior.
