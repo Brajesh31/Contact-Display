@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 📚 Read the documentation
-    url: https://github.com/Brajesh31/Contact-Display/tree/main/docs
-    about: Check the guides before opening a support request.
-  - name: 🔐 Report a security concern
+  - name: 🔐 Private vulnerability reporting
     url: https://github.com/Brajesh31/Contact-Display/security/advisories/new
-    about: Use private vulnerability reporting where available. Do not disclose vulnerabilities publicly.
+    about: Report security vulnerabilities privately. Do not post exploit details or personal contact data in public issues.
+  - name: 📚 Documentation
+    url: https://github.com/Brajesh31/Contact-Display/tree/main/docs
+    about: Browse the project documentation before opening a question.
