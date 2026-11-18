@@ -33,7 +33,7 @@ sequenceDiagram
     Router->>Data: updateContact(id, updates)
     Data->>Store: Read contacts
     Data->>Data: Merge updates
-    Data->>Store: setItem("contacts")
+    Data->>Store: setItem("contacts", contacts)
     Store-->>Router: Updated collection
     Router-->>User: Redirect to detail route
 ```
