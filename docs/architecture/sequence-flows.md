@@ -1,7 +1,6 @@
 # 🔁 Sequence Flows
 
 ## 📇 Contact list
-
 ```mermaid
 sequenceDiagram
     actor User
@@ -20,7 +19,6 @@ sequenceDiagram
 ```
 
 ## ✏️ Edit record
-
 ```mermaid
 sequenceDiagram
     actor User
@@ -39,7 +37,6 @@ sequenceDiagram
 ```
 
 ## 🗑️ Delete record
-
 ```mermaid
 sequenceDiagram
     actor User
