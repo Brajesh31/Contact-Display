@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/branding/contact-display-banner.svg" alt="Contact Display, browser-based contact organizer" width="100%">
+  <img src="docs/assets/branding/contact-display-banner.svg" alt="Contact Display, a browser-based contact manager" width="100%">
 </p>
 
 <div align="center">
@@ -13,7 +13,8 @@
 [![React Router](https://img.shields.io/badge/React_Router-6-CA4245?logo=reactrouter&logoColor=white)](https://reactrouter.com/)
 [![License](https://img.shields.io/github/license/Brajesh31/Contact-Display)](LICENSE)
 [![Last commit](https://img.shields.io/github/last-commit/Brajesh31/Contact-Display)](https://github.com/Brajesh31/Contact-Display/commits/main)
-[![Documentation](https://img.shields.io/badge/Documentation-maintained-blue)](docs/README.md)
+[![Open issues](https://img.shields.io/github/issues/Brajesh31/Contact-Display)](https://github.com/Brajesh31/Contact-Display/issues)
+[![Documentation](https://img.shields.io/badge/Docs-available-blue)](docs/README.md)
 
 </div>
 
@@ -21,122 +22,99 @@
 
 ## 📌 Project at a glance
 
-| Property | Current repository evidence |
+| Property | Repository evidence |
 |---|---|
-| Product | Browser-based contact organizer and React Router data-router learning project |
-| Frontend | React 18 |
-| Routing | React Router DOM 6 data APIs |
+| Application | Client-side contact organizer / React Router learning project |
+| UI | React 18 |
+| Routing | React Router DOM 6 data router |
 | Build tool | Vite 5 |
-| Persistence | localForage, using browser-managed storage |
+| Persistence | localForage browser storage |
 | Search | match-sorter |
 | Sorting | sort-by |
-| Styling | Application CSS and vendored Bootstrap 5.2.3 assets |
-| Runtime model | Client-side application |
-| Backend | No application server found in the inspected root project |
-| Database server | No remote SQL/NoSQL database found |
-| Public HTTP API | No server API contract found |
-| Package manager | npm, with committed package-lock.json |
-| Maintainer | Brajesh Kumar |
+| Styling | Application CSS and existing Bootstrap assets |
+| Package manager | npm with committed lockfile |
+| Backend | No application server found in inspected project files |
+| Remote database | None established by inspected implementation |
+| HTTP API | No public server API contract found |
 
 > [!IMPORTANT]
-> **Architecture boundary:** this project is not documented as a MERN stack application. The inspected implementation uses localForage for browser-side persistence. It does not establish an Express server, MongoDB deployment, REST API, login system, multi-device synchronization, or server-side authorization.
+> This project is documented as a client-side React application. The inspected implementation does not establish a MERN backend, MongoDB, Express server, remote REST API, account system, or cloud synchronization. Contact records are stored locally in the browser through localForage.
 
-## ✨ What the application does
+## ✨ Features
 
-| Feature | Current behavior | Main implementation |
+| Feature | Behavior found in source | Main implementation |
 |---|---|---|
-| 📇 Contact list | Loads and displays saved contact records in the root sidebar. | `src/routes/root.jsx` |
-| 🔎 Search | Submits a query and matches first/last names. | `root.jsx`, `src/contacts.js` |
-| ➕ Create | Creates an empty contact record and redirects to its edit screen. | Root route action |
-| 👁️ View | Loads one record and displays available contact fields. | `src/routes/contact.jsx` |
-| ⭐ Favorite | Submits a favorite toggle using a React Router fetcher form. | `contact.jsx` |
-| ✏️ Edit | Updates fields from a submitted form and redirects to details. | `src/routes/edit.jsx` |
-| 🗑️ Delete | Requests browser confirmation, deletes the record, then redirects to root. | `src/routes/destroy.jsx` |
-| 💾 Persistence | Stores the contact collection under localForage key `contacts`. | `src/contacts.js` |
-| ⚠️ Route errors | Uses a router error element and a 404 response for unknown contact IDs. | `src/main.jsx`, route modules |
+| 📇 Contact list | Loads and displays saved records. | `src/routes/root.jsx` |
+| 🔎 Search | Matches first and last names from the `q` query. | Root route and `src/contacts.js` |
+| ➕ Create | Creates a record and redirects to its edit route. | Root route action |
+| 👤 View | Loads and displays one contact. | `src/routes/contact.jsx` |
+| ⭐ Favorite | Updates favorite value via a router fetcher form. | Contact route action |
+| ✏️ Edit | Submits form data and redirects to details. | `src/routes/edit.jsx` |
+| 🗑️ Delete | Requests confirmation, runs local data action, redirects. | `src/routes/destroy.jsx` |
+| 💾 Persistence | Stores contacts in browser through localForage. | `src/contacts.js` |
+| ⚠️ Route errors | Router error element handles route exceptions. | `src/error.jsx` |
 
-Feature descriptions reflect static inspection of source. They are not a claim that every route currently passes a runtime test. Known source-level concerns are listed in [Known issues](docs/known-issues.md).
+These are static source observations, not claims that all flows passed runtime tests. See [known issues](docs/known-issues.md).
 
-## 🖼️ Visual identity and architecture
+## 🖼️ Architecture visuals
 
-<p align="center">
-  <img src="docs/assets/architecture/contact-display-architecture.svg" alt="Contact Display client-side architecture, from browser UI through React Router and contact helpers to localForage storage" width="92%">
-</p>
+<p align="center"><img src="docs/assets/architecture/contact-display-architecture.svg" alt="Contact Display client-side architecture from browser to React Router, contact helpers, and localForage" width="92%"></p>
+<p align="center"><img src="docs/assets/architecture/contact-data-flow.svg" alt="Contact data read and write flow through route actions, helpers, and browser storage" width="92%"></p>
+<p align="center"><img src="docs/assets/architecture/contact-sequence.svg" alt="Contact route and persistence sequence" width="92%"></p>
 
-<p align="center">
-  <img src="docs/assets/architecture/contact-data-flow.svg" alt="Contact data read and write flow between route actions, contact helpers, localForage, and browser storage" width="92%">
-</p>
+These are technical illustrations, not application screenshots. Genuine UI screenshots have not been captured and verified in this repository. See [visual assets](docs/assets/README.md).
 
-<p align="center">
-  <img src="docs/assets/architecture/contact-sequence.svg" alt="Contact Display route and persistence interaction sequence" width="92%">
-</p>
-
-The diagrams are documentation assets, not application runtime dependencies. Editable Mermaid sources and design notes are in [the architecture catalog](docs/architecture/README.md).
-
-**Application screenshots:** genuine page screenshots have not yet been captured and verified in this repository. The architecture illustrations above are not presented as UI screenshots or product demo images.
-
-## 🏛️ System architecture
+## 🏛️ Architecture
 
 ```mermaid
 flowchart TD
-    Browser["🌐 Browser"]
-    HTML["index.html"]
-    Entry["src/main.jsx"]
-    Router["React Router data router"]
-    Root["Root route: list and search"]
-    Detail["Contact details and favorite"]
-    Edit["Edit contact form"]
-    Delete["Delete action"]
-    Data["src/contacts.js"]
-    Store["localForage"]
-    Persist[("Browser-managed contacts collection")]
-
-    Browser --> HTML --> Entry --> Router
-    Router --> Root
-    Router --> Detail
-    Router --> Edit
-    Router --> Delete
-    Root --> Data
-    Detail --> Data
-    Edit --> Data
-    Delete --> Data
-    Data --> Store --> Persist
+  Browser["Browser"] --> HTML["index.html"]
+  HTML --> Entry["src/main.jsx"]
+  Entry --> Router["React Router data router"]
+  Router --> Root["Root list/search route"]
+  Router --> Detail["Contact detail/favorite route"]
+  Router --> Edit["Edit contact route"]
+  Router --> Delete["Delete action route"]
+  Root --> Helpers["src/contacts.js"]
+  Detail --> Helpers
+  Edit --> Helpers
+  Delete --> Helpers
+  Helpers --> LocalForage["localForage"]
+  LocalForage --> Storage[("Browser-managed contacts collection")]
 ```
 
-### 🔀 Route inventory
+### 🧭 Route inventory
 
 | URL | Screen/action | Loader | Action | Result |
 |---|---|---|---|---|
-| `/` | Contact list and index | `rootLoader` | `rootAction` | Loads list/search; create action redirects to edit. |
-| `/contacts/:contactId` | Contact details | `contactLoader` | `contactAction` | Displays a record; action toggles favorite. |
-| `/contacts/:contactId/edit` | Edit form | `editLoader` | `editAction` | Loads form data, updates record, redirects to detail. |
-| `/contacts/:contactId/destroy` | Destructive action route | None | `destroyAction` | Deletes record and redirects to root. |
+| `/` | List and index state | Root loader | Root action | Loads list/search; creates and redirects to edit. |
+| `/contacts/:contactId` | Contact details | Contact loader | Contact action | Displays contact and toggles favorite. |
+| `/contacts/:contactId/edit` | Contact editor | Edit loader | Edit action | Loads and updates fields. |
+| `/contacts/:contactId/destroy` | Destructive action | None | Destroy action | Deletes and redirects to root. |
 
-Routes are registered in `src/main.jsx`. The destroy URL is an action endpoint inside the client router, not a remote HTTP DELETE API.
+These are client-side routes, not remote server endpoints. See [page-by-page guide](docs/page-documentation.md) and [route/state model](docs/architecture/route-and-state-model.md).
 
 ## 🧰 Technology stack
 
-| Layer | Technology | Role |
+| Layer | Technology | Purpose |
 |---|---|---|
-| UI | React 18 | Component rendering and stateful interaction. |
-| Routing | React Router DOM 6 | Browser route matching, loaders, actions, forms, and navigation. |
-| Build | Vite 5 | Development server and production bundling. |
-| Storage | localForage 1.10 | Browser-managed asynchronous storage abstraction. |
-| Search | match-sorter 6 | Match contacts by first and last name. |
-| Sorting | sort-by 1 | Order records by last name and creation time. |
-| Styles | CSS and vendored Bootstrap 5.2.3 assets | Styling resources. |
+| UI | React 18 | Component rendering. |
+| Routing | React Router DOM 6 | Browser routing, loaders, actions, navigation. |
+| Build | Vite 5 | Development and production bundle. |
+| Storage | localForage 1.10 | Browser-managed asynchronous persistence. |
+| Search | match-sorter 6 | Contact name matching. |
+| Sorting | sort-by 1 | Contact ordering. |
+| Styles | CSS and existing Bootstrap assets | Application presentation. |
 | Static analysis | ESLint 8 | Configured lint command. |
 
-Exact dependency ranges and scripts are defined in the existing `package.json` and `package-lock.json`. They are intentionally not changed by this repository documentation work.
+Exact dependency ranges and scripts remain in existing `package.json` and `package-lock.json`; they are preserved during this documentation enhancement.
 
 ## 🚀 Run locally
 
 ### Prerequisites
 - Git
-- Node.js compatible with the existing Vite 5 toolchain
+- Node.js compatible with existing Vite 5 toolchain
 - npm
-
-No backend, database server, API secret, or project-specific environment variable is required by the inspected root manifest.
 
 ### Installation
 
@@ -147,51 +125,47 @@ npm ci
 npm run dev
 ```
 
-Vite prints the local address in the terminal.
+Vite prints the local development URL in the terminal.
 
-### Available commands
+### Existing npm commands
 
 | Command | Purpose |
 |---|---|
-| `npm ci` | Install exact dependencies from the npm lockfile. |
-| `npm run dev` | Start the Vite development server. |
-| `npm run build` | Create the production bundle in `dist/`. |
-| `npm run preview` | Preview the generated production bundle locally. |
-| `npm run lint` | Execute the configured ESLint command. |
+| `npm ci` | Install from committed npm lockfile. |
+| `npm run dev` | Start Vite development server. |
+| `npm run build` | Produce production bundle in `dist/`. |
+| `npm run preview` | Preview production build locally. |
+| `npm run lint` | Execute existing ESLint command. |
 
-The root manifest does not define `npm start`, a backend startup script, database migrations, or a test runner.
+The inspected root manifest does not define `npm start`, server startup, database migrations, or a test runner.
 
 ## 💾 Data model and privacy
 
-The data helper uses localForage and a collection key named `contacts`. The observed object fields are:
+The data helper stores an array under localForage key `contacts`.
 
-| Field | Observed use | Notes |
+| Field | Observed purpose | Notes |
 |---|---|---|
-| `id` | Record identity and route lookup | Generated by the current helper. |
-| `createdAt` | Creation timestamp and sorting | Numeric timestamp. |
-| `first`, `last` | Name display and search | Optional form values. |
-| `avatar` | Avatar image URL | Can reference an external resource. |
-| `website` | Website display/link | Current UI prefixes HTTPS. |
-| `number` | Phone number display and edit | Form constrains a 3-3-4 digit pattern. |
-| `notes` | Free-form contact notes | May contain personal information. |
-| `favorite` | Star indicator and toggle | Form value is converted to a boolean. |
+| `id` | Contact identity and route lookup. | Generated by current helper. |
+| `createdAt` | Creation timestamp and sort value. | Numeric timestamp. |
+| `first`, `last` | Contact name and search. | Form values. |
+| `avatar` | Avatar image URL. | May reference external host. |
+| `website` | Website display/link. | UI prefixes HTTPS. |
+| `number` | Phone number. | Form uses 3-3-4 digit pattern. |
+| `notes` | Free-form notes. | May contain personal data. |
+| `favorite` | Favorite marker. | Updated by contact action. |
 
-This is an observed JavaScript object shape, not a remote database schema. Data is scoped to browser storage for the current origin and browser profile. Clearing site data may remove it. No cloud backup or cross-device sync is shown.
-
-**Privacy guidance:** avoid storing highly sensitive data. Protect shared browser profiles. Redact contact names, phone numbers, notes, and storage exports from issues, screenshots, and logs.
-
-Read [Data architecture](docs/architecture/data-architecture.md) and [Privacy](docs/privacy.md).
+This is an observed JavaScript object shape, not a remote database schema. Records are browser-profile/origin scoped; clearing site data can remove them. No cloud backup or cross-device sync is established. See [data architecture](docs/architecture/data-architecture.md) and [privacy guidance](docs/privacy.md).
 
 ## 🧪 Quality and verification
 
-Application commands available from the existing package scripts:
+Existing application commands:
 
 ```bash
 npm run lint
 npm run build
 ```
 
-Documentation-only validation utilities:
+Documentation validation:
 
 ```bash
 python scripts/validate_docs.py
@@ -199,47 +173,36 @@ python scripts/validate_links.py
 python scripts/validate_svg.py
 ```
 
-A documented command is not evidence of a passing run. Check the associated GitHub Actions run or local exit code before claiming a check passed. There is no test runner declared in the inspected package manifest.
+A documented command is not evidence of a passing run. Check its actual exit code or CI run. No application test runner is declared in the inspected manifest.
 
-## 🔐 Security model
+## 🔐 Security boundary
 
-This is a client-side application. The browser profile and its storage are user-controlled. There is no verified server-side authentication or authorization layer. Contact fields and external URLs should be treated as untrusted input. The repository security policy is in [SECURITY.md](SECURITY.md), with technical details in [the security guide](docs/security.md) and [threat model](docs/threat-model.md).
+Browser storage is controlled by the user and does not provide server-side authentication or authorization. Treat contact fields as personal data. Do not add real names, phone numbers, notes, or storage exports to public screenshots/issues. See [SECURITY.md](SECURITY.md), [security guide](docs/security.md), and [threat model](docs/threat-model.md).
 
-## 📚 Documentation map
+## 📚 Documentation index
 
-| Area | Documentation |
+| Topic | Documentation |
 |---|---|
-| 📌 Product | [Overview](docs/product-overview.md) · [Objectives](docs/product-objectives.md) · [Background](docs/project-background.md) · [Solution](docs/solution-overview.md) |
-| ✨ Product behavior | [Features](docs/features.md) · [Functional requirements](docs/functional-requirements.md) · [Use cases](docs/use-cases.md) · [User journeys](docs/user-journeys.md) · [Scope and limitations](docs/scope-and-limitations.md) |
-| 🏛️ Architecture | [Architecture](docs/architecture.md) · [System design](docs/system-design.md) · [Module dependencies](docs/architecture/module-dependency.md) · [Runtime sequence](docs/architecture/runtime-sequence.md) |
-| 🗺️ Frontend | [Page documentation](docs/page-documentation.md) · [Navigation](docs/navigation-structure.md) · [Component inventory](docs/component-library.md) · [Design system](docs/design-system.md) · [Responsive review](docs/responsive-design.md) |
-| 💾 Data | [Data flow](docs/data-flow.md) · [Data architecture](docs/architecture/data-architecture.md) · [Data dictionary](docs/architecture/data-dictionary.md) · [Persistence boundary](docs/database.md) |
+| 📌 Product | [Overview](docs/product-overview.md) · [Features](docs/features.md) · [Requirements](docs/functional-requirements.md) · [User journeys](docs/user-journeys.md) · [Scope](docs/scope-and-limitations.md) |
+| 🏛️ Architecture | [Architecture](docs/architecture.md) · [System design](docs/system-design.md) · [Project structure](docs/project-structure.md) · [Route/state model](docs/architecture/route-and-state-model.md) · [Traceability](docs/architecture/requirements-traceability.md) |
+| 🧭 Frontend | [Pages/routes](docs/page-documentation.md) · [Navigation](docs/navigation-structure.md) · [Components](docs/component-library.md) · [Design system](docs/design-system.md) · [Responsive design](docs/responsive-design.md) |
+| 💾 Data | [Data flow](docs/data-flow.md) · [Data architecture](docs/architecture/data-architecture.md) · [Data dictionary](docs/architecture/data-dictionary.md) · [Persistence](docs/database.md) |
 | 🛠️ Development | [Installation](docs/installation.md) · [Getting started](docs/getting-started.md) · [Developer guide](docs/developer-guide.md) · [Commands](docs/commands-reference.md) · [Troubleshooting](docs/troubleshooting.md) |
-| 🧪 Quality | [Testing](docs/testing.md) · [Test strategy](docs/test-strategy.md) · [Accessibility](docs/accessibility.md) · [Known issues](docs/known-issues.md) |
+| 🧪 Quality | [Testing](docs/testing.md) · [Test strategy](docs/test-strategy.md) · [Quality gates](docs/quality-gates.md) · [Accessibility](docs/accessibility.md) · [Known issues](docs/known-issues.md) |
+| 🔐 Security/privacy | [Security](docs/security.md) · [Threat model](docs/threat-model.md) · [Privacy](docs/privacy.md) · [Risk register](docs/risk-register.md) |
 | 🚀 Operations | [Deployment](docs/deployment.md) · [CI/CD](docs/ci-cd.md) · [Monitoring](docs/monitoring.md) · [Maintenance](docs/maintenance.md) |
-| 🔐 Security and privacy | [Security](docs/security.md) · [Threat model](docs/threat-model.md) · [Privacy](docs/privacy.md) · [Risk register](docs/risk-register.md) |
-| 🧩 Reuse | [Templates](docs/templates/README.md) · [Visual assets](docs/assets/README.md) · [Architecture diagrams](docs/architecture/README.md) |
+| 🧩 Reuse | [Templates](docs/templates/README.md) · [Visual assets](docs/assets/README.md) · [Architecture catalog](docs/architecture/README.md) |
 
-See the [complete documentation index](docs/README.md).
+Start at [the documentation hub](docs/README.md).
 
-## 🛣️ Roadmap
+## 🛣️ Roadmap and contribution
 
-Current source observations and proposals are separated in [ROADMAP.md](ROADMAP.md). Proposed fixes are not represented as implemented.
+See [ROADMAP.md](ROADMAP.md) for proposed work and [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidance. Planned work is not represented as implemented.
 
-## 🤝 Contributing
+## 🔒 Repository enhancement boundary
 
-Read [CONTRIBUTING.md](CONTRIBUTING.md). Repository documentation and maintenance changes should not rewrite application files without separate, explicit authorization.
+Documentation enhancement preserves application source, styles, static application assets, HTML entry point, dependency manifests, lockfiles, and build configuration. See [project structure and ownership](docs/project-structure.md).
 
 ## 📄 License
 
-This repository includes an MIT license. See [LICENSE](LICENSE). Third-party and vendored components retain any applicable separate notices and license obligations.
-
-## 👨‍💻 Maintainer
-
-**Brajesh Kumar** · [GitHub](https://github.com/Brajesh31)
-
----
-
-<sub>Documentation is based on static inspection of the repository's default branch. It does not certify runtime behavior, security, accessibility conformance, deployment status, or production readiness.</sub>
-
-Last updated: 2026-11-18 02:56 UTC
+Distributed under the MIT License. See [LICENSE](LICENSE).
