@@ -4,8 +4,7 @@
 <rect width="1200" height="680" rx="24" fill="#f8fafc"/><text x="55" y="65" class="h">Contact Display · Runtime Architecture</text>
 <rect x="55" y="120" width="200" height="100" rx="16" class="b"/><text x="155" y="160" text-anchor="middle" class="s">User</text><text x="155" y="190" text-anchor="middle" class="p">Browser</text>
 <rect x="335" y="120" width="220" height="100" rx="16" class="b"/><text x="445" y="160" text-anchor="middle" class="s">React UI</text><text x="445" y="190" text-anchor="middle" class="p">React 18</text>
-<rect x="635" y="120" width="230" height="100" rx="16" class="v"/><text x="750" y="160" text-anchor="middle" class="s">React Router</text><text x="750" y="190" text-anchor="middle" class="p">Loaders · Actions</text>
-<path d="M255 170H335M555 170H635" class="a"/>
+<rect x="635" y="120" width="230" height="100" rx="16" class="v"/><text x="750" y="160" text-anchor="middle" class="s">React Router</text><text x="750" y="190" text-anchor="middle" class="p">Loaders · Actions</text><path d="M255 170H335M555 170H635" class="a"/>
 <rect x="315" y="330" width="260" height="155" rx="16" class="b"/><text x="445" y="370" text-anchor="middle" class="s">Route modules</text><text x="445" y="408" text-anchor="middle" class="p">Root / list / search</text><text x="445" y="437" text-anchor="middle" class="p">Contact / Edit / Delete</text>
 <rect x="665" y="330" width="230" height="155" rx="16" class="g"/><text x="780" y="370" text-anchor="middle" class="s">contacts.js</text><text x="780" y="408" text-anchor="middle" class="p">CRUD helpers</text><text x="780" y="437" text-anchor="middle" class="p">Search and sorting</text>
 <rect x="975" y="330" width="175" height="155" rx="16" class="g"/><text x="1062" y="370" text-anchor="middle" class="s">localForage</text><text x="1062" y="408" text-anchor="middle" class="p">Browser storage</text><text x="1062" y="437" text-anchor="middle" class="p">Key: contacts</text>
