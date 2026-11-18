@@ -209,4 +209,4 @@ Distributed under the MIT License. See [LICENSE](LICENSE).
 
 <sub>Documentation describes the repository as inspected. Verify current source and CI before relying on operational or security claims.</sub>
 
-Last updated: 2026-11-18 01:55 UTC
+Last updated: 2026-11-18 01:57 UTC
