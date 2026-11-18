@@ -1,25 +1,32 @@
-# 🧩 Documentation Templates
+# 🧩 Engineering and Project Templates
 
-Reusable templates for project decisions, engineering work, quality reviews, and operations.
+Reusable templates for documenting architecture, product changes, APIs, quality evidence, security, operations, and project status.
 
 | Template | Use |
 |---|---|
-| [ADR](adr-template.md) | Record an architecture decision. |
-| [Feature specification](feature-specification-template.md) | Specify a proposed feature. |
-| [API documentation](api-documentation-template.md) | Document a verified API contract. |
-| [Test plan](test-plan-template.md) | Plan test execution. |
-| [Test report](test-report-template.md) | Record actual test evidence. |
-| [Threat assessment](threat-assessment-template.md) | Evaluate a security threat. |
-| [Accessibility audit](accessibility-audit-template.md) | Record accessibility findings. |
-| [Incident report](incident-report-template.md) | Capture an incident and response. |
-| [Release checklist](release-checklist.md) | Verify a release. |
-| [Deployment checklist](deployment-checklist.md) | Verify a deployment. |
-| [Risk assessment](risk-assessment-template.md) | Register and mitigate risk. |
-| [Code review](code-review-template.md) | Structure peer review. |
-| [Maintenance checklist](maintenance-checklist.md) | Plan recurring maintenance. |
-| [Bug report](bug-report-template.md) | Report a reproducible defect. |
-| [Change request](change-request-template.md) | Propose a controlled change. |
-| [Runbook](runbook-template.md) | Document operational steps. |
-| [Project status](project-status-template.md) | Summarize project status. |
+| [ADR](adr-template.md) | Record a technical decision, alternatives, and consequences. |
+| [Feature specification](feature-specification-template.md) | Specify requirements, acceptance criteria, security, and rollout. |
+| [API contract](api-documentation-template.md) | Document a verified API; do not invent endpoints. |
+| [Test plan](test-plan-template.md) | Define scope, scenarios, environment, and exit criteria. |
+| [Test report](test-report-template.md) | Record actual execution results and evidence. |
+| [Threat assessment](threat-assessment-template.md) | Document assets, trust boundaries, threats, controls, and residual risk. |
+| [Accessibility audit](accessibility-audit-template.md) | Record tested pages, criteria, findings, and limitations. |
+| [Incident report](incident-report-template.md) | Capture timeline, impact, response, and follow-up. |
+| [Release checklist](release-checklist.md) | Confirm release readiness. |
+| [Deployment checklist](deployment-checklist.md) | Verify environment, artifact, smoke tests, and rollback. |
+| [Risk assessment](risk-assessment-template.md) | Track likelihood, impact, mitigation, and ownership. |
+| [Code review](code-review-template.md) | Review correctness, security, testing, and maintainability. |
+| [Maintenance checklist](maintenance-checklist.md) | Schedule ongoing repository and dependency reviews. |
+| [Bug report](bug-report-template.md) | Report reproducible, sanitized issues. |
+| [Change request](change-request-template.md) | Assess a proposed change and its impact. |
+| [Runbook](runbook-template.md) | Record repeatable operational procedures. |
+| [Project status](project-status-template.md) | Report progress, blockers, risks, and measured metrics. |
 
-Use only templates relevant to the work. Replace instructions and placeholders before publication; never represent an unverified result as complete.
+## ✅ Template use rules
+
+1. Replace every placeholder before publishing a completed record.
+2. Identify owner, date, status, scope, and affected components.
+3. Link commits, test runs, issues, screenshots, and reports as evidence.
+4. Separate verified facts from assumptions and proposals.
+5. Do not enter real contact data, access tokens, or secrets into examples.
+6. Record review and approval where the process requires it.
