@@ -113,7 +113,7 @@
     "@rollup/plugin-node-resolve": "^14.1.0",
     "@rollup/plugin-replace": "^4.0.0",
     "autoprefixer": "^10.4.12",
-    "bundlewatch": "^0.3.3",
+    "bundlewatch": "^1.2.0",
     "clean-css-cli": "^5.6.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.24.0",
@@ -125,7 +125,7 @@
     "find-unused-sass-variables": "^4.0.4",
     "globby": "^11.1.0",
     "hammer-simulator": "0.0.1",
-    "hugo-bin": "^0.92.2",
+    "hugo-bin": "^0.167.0",
     "ip": "^2.0.0",
     "jquery": "^3.6.1",
     "karma": "^6.4.1",
@@ -150,7 +150,7 @@
     "stylelint": "^14.13.0",
     "stylelint-config-twbs-bootstrap": "^6.0.0",
     "terser": "^5.15.0",
-    "vnu-jar": "22.9.29"
+    "vnu-jar": "26.2.1"
   },
   "files": [
     "dist/{css,js}/*.{css,js,map}",
