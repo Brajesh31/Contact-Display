@@ -21,6 +21,9 @@ Reusable templates for documenting architecture, product changes, APIs, quality 
 | [Change request](change-request-template.md) | Assess a proposed change and its impact. |
 | [Runbook](runbook-template.md) | Record repeatable operational procedures. |
 | [Project status](project-status-template.md) | Report progress, blockers, risks, and measured metrics. |
+| [Documentation review](documentation-review-template.md) | Review documentation accuracy, evidence, links, and protected-file boundaries. |
+| [Production readiness](production-readiness-template.md) | Record evidence-based production readiness and blockers. |
+| [Dependency review](dependency-review-template.md) | Assess dependency risks without making unapproved dependency changes. |
 
 ## ✅ Template use rules
 
