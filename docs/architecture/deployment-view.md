@@ -1,7 +1,6 @@
 # 🚀 Deployment View
 
 ## Current build path
-
 ```mermaid
 flowchart TD
     Repo[Git repository] --> Install[npm ci]
@@ -21,6 +20,4 @@ flowchart TD
 | CDN / hosting | Provider not established. |
 | Secrets service | Not established. |
 
-## ⚠️ Hosting requirements
-
-A static host must serve the application entry for supported browser routes. Browser persistence is origin-scoped; changing domain or protocol can make the prior browser-local data unavailable at the new origin. No provider-specific deployment is claimed.
+A static host must serve the app entry for supported client-side routes. Browser persistence is origin-scoped; changing domain or protocol can make prior browser-local data unavailable. No provider-specific deployment is claimed.
